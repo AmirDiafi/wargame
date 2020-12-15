@@ -1,0 +1,74 @@
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+#player {
+    width: 80px;
+    height: 80px;
+    background: #310636;
+    position: fixed;
+    bottom: 10px;
+    left: calc(50% - 75px);
+    border-radius: 10px;
+    z-index: 5;
+}
+
+#player #shot {
+    display: inline-block;
+    position: fixed;
+    bottom: 90px;
+    border: 25px solid;
+    border-color: transparent;
+    border-bottom-color: chartreuse;
+    transition: all .2s linear;
+    filter: drop-shadow(0px 3px 6px black);
+}
+
+#player::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 25px);
+    border: 25px solid;
+    border-color: transparent;
+    border-bottom-color: #310636;
+}
+
+.targets {
+    background-color: rgb(49, 6, 54);
+    min-height: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+.targets .target {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
+    position: relative;
+    display: inline-block;
+}
+
+.targets .shoted {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+}
+
+.targets .target::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 25px);
+    border: 25px solid;
+    border-color: transparent;
+    border-bottom-color: rgb(49, 6, 54);
+}
